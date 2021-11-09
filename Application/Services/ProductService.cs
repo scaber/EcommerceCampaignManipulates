@@ -14,24 +14,7 @@ namespace Application.Services
             if (ProductsList == null)
                 ProductsList = new List<Products>();
         }
-        public void ChangeProductPrice(string productCode, double price)
-        {
-            var product = ProductsList.Where(x => x.ProductCode == productCode).FirstOrDefault();
-            if (product != null)
-            {
-                if (product.Price>0 && product.RealPrice> 0)
-                {
-                    product.Price = price;
-                    product.RealPrice = price;
-                }
-                else
-                {
-                    Console.WriteLine("Price should be greater or equal to zero");
-                }
-  
-            }
-        }
-
+      
         public void Create(string productCode, double price, int stock)
         {
           
