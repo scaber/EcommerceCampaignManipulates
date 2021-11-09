@@ -6,7 +6,6 @@ namespace Application.Interfaces
     {
         void Create(string productCode, double price, int stock);
         Products GetProducts(string productCode);
-        void IncraseTime(int totalIncrase);
-        void ChangeProductPrice(string productCode, double price);
+        void IncraseTime(int totalIncrase); 
     }
 }
