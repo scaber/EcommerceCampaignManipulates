@@ -45,8 +45,7 @@ namespace Application
 
                 CommandList.Add("create_product", CreateProduct);
                 CommandList.Add("create_campaign", CreateCampaign);
-                CommandList.Add("increase_time", IncraseTime);
-                CommandList.Add("change_product_price", ChangeProductPrice);
+                CommandList.Add("increase_time", IncraseTime); 
                 CommandList.Add("get_product_info", GetProductInfo);
                 CommandList.Add("create_order", CreateOrder);
                 CommandList.Add("get_campaign_info", GetCampaignInfo);
@@ -93,13 +92,7 @@ namespace Application
             {
                 Console.WriteLine($"Product {productCode} not found"); 
             } 
-        }
-        private void ChangeProductPrice(string[] arguments)
-        {
-            string productCode = GetParameter<string>(arguments, 0);
-            double price = GetParameter<double>(arguments, 1);
-            productService.ChangeProductPrice(productCode, price);
-        }
+        } 
         private void CreateProduct(string[] arguments)
         {
             string productCode = GetParameter<string>(arguments, 0);
