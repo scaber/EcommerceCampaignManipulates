@@ -46,14 +46,14 @@ namespace Application.Test.Services
         {
             var product = new Products("p1", 100, 1000);
 
-            product.Campaigns = new Campaigns("c1", product, 10, 20, 10);
+            product.Campaigns = new Campaigns("c1", product, 10, 20, 100);
 
 
-            orderService.Create(product, 5, new TimeSpan(0, 0, 0));
+            orderService.Create(product, 3, new TimeSpan(0, 0, 0));
 
             double avarageItemPrice = orderService.AverageItemPriceByCampaign("c1");
 
-            Assert.Equal(20, avarageItemPrice);
+            Assert.Equal(100, avarageItemPrice);
 
         }
     }
